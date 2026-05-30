@@ -84,3 +84,67 @@ footer {
   color: var(--muted);
   font-size: 0.8rem;
 }
+
+/* ── Calendar ─────────────────────────────────────────────── */
+
+.calendar {
+  margin: 2.75rem auto 0;
+  width: min(320px, 100%);
+  padding: 1rem 1.1rem 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--muted) 32%, transparent);
+  border-radius: 14px;
+}
+
+.cal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.cal-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+}
+
+.cal-nav {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.1rem 0.55rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+.cal-nav:hover { color: var(--accent); }
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.cal-downame {
+  font-size: 0.66rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding-bottom: 0.4rem;
+}
+
+.cal-day {
+  font-size: 0.82rem;
+  padding: 0.4rem 0;
+  border-radius: 8px;
+  font-variant-numeric: tabular-nums;
+}
+.cal-empty { visibility: hidden; }
+
+.cal-today {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
